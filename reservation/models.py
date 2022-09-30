@@ -5,7 +5,7 @@ class Reservation (models.Model):
     Nom_Client = models.CharField(max_length=50,blank=False, default="NomClient")
     Email = models.EmailField(max_length=50,blank=False)
     Prix_payer = models.FloatField(blank=False, default=1)
-    Date = models.DateField(blank=False)
+    Date = models.DateField(auto_now_add=True ,blank=False)
     Matricule = models.CharField(max_length=50, blank=False) 
     Periode_une = models.BooleanField(blank=False)
     Periode_deux = models.BooleanField(blank=False)
